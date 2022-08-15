@@ -73,8 +73,12 @@ header {
       width: 32px;
     }
     .cart-name {
-      position: relative;
-      left: -10px;
+      display: none;
+      @media (min-width: 768px) {
+        display: inline;
+        position: relative;
+        left: -10px;
+      }
     }
     .cart-item-count {
       position: relative;
