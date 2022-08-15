@@ -1,9 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
 
 @import "reset.scss";
+@import "_variables.scss";
 @import "header.scss";
+@import "utility-menu.scss";
 
 html {
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
+}
+
+body {
+  overflow: hidden;
+}
+
+.max-width {
+  max-width: $content-max-width;
+  margin: 0 auto;
 }

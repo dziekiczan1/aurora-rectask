@@ -8,34 +8,87 @@
     <link rel="stylesheet" href="/src/sass/index.scss" />
   </head>
   <body>
-    <header>
-      <nav class="top-menu">
-        <ul>
-          <li class="align-flex-start"></li>
-          <li class="align-flex-start"></li>
-          <li class="align-flex-end"></li>
-          <li class="align-flex-end"></li>
-        </ul>
-      </nav>
-      <nav class="middle-menu">
-        <div class="logo"></div>
-        <div class="search"></div>
-        <div class="cart"></div>
-      </nav>
-      <nav class="category-menu">
-        <ul>
-          <li class="category-link"></li>
-          <li class="category-link"></li>
-          <li class="category-link"></li>
-          <li class="category-link"></li>
-          <li class="category-link"></li>
-          <li class="category-link"></li>
-          <li class="category-link"></li>
-          <li class="category-link"></li>
-          <li class="category-link"></li>
-          <li class="category-link"></li>
-        </ul>
-      </nav>
-    </header>
+    <nav class="utility-menu">
+      <ul class="max-width">
+        <li class="utility-menu__item">
+          <a href="tel:293939098"
+            ><img src="./assets/icons/phone.png" alt="" /><span
+              >293 939 098</span
+            ></a
+          >
+        </li>
+        <li class="utility-menu__item flex-put-left">
+          <a href="mailto:kontakt@aurorabox.pl"
+            ><img src="./assets/icons/envelope.png" alt="" /><span
+              >kontakt@aurorabox.pl</span
+            ></a
+          >
+        </li>
+        <li class="utility-menu__item flex-put-right">
+          <button class="border-left">
+            <img src="./assets/icons/padlock.png" alt="" /><span
+              >Zaloguj się</span
+            >
+          </button>
+        </li>
+        <li class="utility-menu__item">
+          <button class="border-sides">
+            <img src="./assets/icons/user.png" alt="" /><span>Zaloguj się</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <div class="max-width">
+      <header>
+        <nav class="middle-menu">
+          <div class="logo"><img src="./assets/logo.png" alt="" /></div>
+          <div class="search">
+            <div>
+              <input placeholder="Co chcesz kupić?" />
+              <img src="./assets/icons/search.png" alt="" />
+            </div>
+          </div>
+          <div class="cart">
+            <img src="./assets/icons/bag.png" alt="" />
+            <div class="cart-item-count"><span>2</span></div>
+            <span class="cart-name">Twój koszyk</span>
+          </div>
+        </nav>
+        <nav class="category-menu">
+          <div class="hamburger-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="menu">
+            <li class="category-link"><span>Kategorie</span></li>
+            <li class="category-link"><span>Nowości</span></li>
+            <li class="category-link"><span>Promocje</span></li>
+            <li class="category-link"><span>Wyprzedaże</span></li>
+            <li class="category-link"><span>Kolekcje sezony</span></li>
+            <li class="category-link"><span>Nasza oferta</span></li>
+            <li class="category-link"><span>Trendy 2018</span></li>
+            <li class="category-link"><span>Blog</span></li>
+            <li class="category-link"><span>Kontakt</span></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <script>
+      const hamburger = document.querySelector(".hamburger-menu");
+      const navMenu = document.querySelector(".menu");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".category-link").forEach((n) =>
+        n.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+        })
+      );
+    </script>
   </body>
 </html>

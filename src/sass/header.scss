@@ -1,6 +1,11 @@
 header {
   width: 100%;
-}
-
-.top-menu {
+  display: flex;
+  flex-direction: column-reverse;
+  @media (min-width: 768px) {
+    flex-direction: column;
+    margin-top: 54px;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $color-gray;
+  }
 }
